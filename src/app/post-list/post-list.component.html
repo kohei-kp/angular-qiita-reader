@@ -1,0 +1,14 @@
+<div style="grid-column: 1 / 2; border: 1px solid #ccc;">
+  <h1>記事一覧</h1>
+  <button>更新</button>
+  <div class="post-list">
+    <ul>
+      <li *ngFor="let post of postList"
+        [class.selected]="post.id === selectedPostId"
+        (click)="handleClickPost(post.id)"
+      >
+        {{post.title}}
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="grid">
+  <app-post-list
+    [postList]="qiitaPostList"
+    (sendPostId)="updateSelectedPostContent($event)"
+  ></app-post-list>
+  <app-post-content
+    [selectedContent]="selectedPostContent"
+  ></app-post-content>
+</div>
